@@ -19,12 +19,6 @@
         </el-radio-group>
         <p class="text-gray-400 text-xs mt-1.5">{{text.logTypeHint}}</p>
       </el-form-item>
-      <el-form-item :label="text.autoUpdate">
-        <el-switch
-          @change="saveSetting"
-          v-model="settingForm.autoUpdate">
-        </el-switch>
-      </el-form-item>
       <el-form-item :label="text.proxyMode">
         <el-switch
           @change="saveSetting"
@@ -58,15 +52,14 @@ const data = reactive({
 const settingForm = reactive({
   lang: 'en',
   logType: 1,
-  proxyMode: true,
-  autoUpdate: true
+  proxyMode: true
 })
 
 const text = computed(() => props.i18n.ui.setting)
 const about = computed(() => props.i18n.ui.about)
 
 const saveSetting = async () => {
-  const keys = ['lang', 'logType', 'proxyMode', 'autoUpdate']
+  const keys = ['lang', 'logType', 'proxyMode']
   for (let key of keys) {
     await ipcRenderer.invoke('SAVE_CONFIG', [key, settingForm[key]])
   }

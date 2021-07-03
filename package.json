@@ -1,8 +1,11 @@
 {
   "name": "genshin-wish-export",
-  "version": "0.6.12",
+  "version": "0.6.12-ht",
   "main": "./dist/electron/main/main.js",
-  "author": "biuuu <https://github.com/biuuu>",
+  "contributors": [
+    "biuuu <https://github.com/biuuu>",
+    "howardt12345 <https://github.com/howardt12345>"
+  ],
   "license": "MIT",
   "scripts": {
     "dev": "node .electron-vite/dev-runner.js",
@@ -34,9 +37,9 @@
       }
     ],
     "productName": "Genshin Wish Export",
-    "appId": "org.biuuu.genshin-wish-export",
+    "appId": "org.ht12345.genshin-wish-export",
     "directories": {
-      "output": "build"
+      "output": "ht12345"
     },
     "files": [
       "dist/electron/**/*"

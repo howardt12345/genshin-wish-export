@@ -5,7 +5,6 @@ const { initWindow } = require('./utils')
 const { disableProxy, proxyStatus } = require('./module/system-proxy')
 require('./getData')
 require('./excel')
-const { getUpdateInfo } = require('./update/index')
 
 const isDev = !app.isPackaged
 let win = null
@@ -52,12 +51,6 @@ if (!isFirstInstance) {
   app.on('will-quit', (e) => {
     if (proxyStatus.started) {
       disableProxy()
-    }
-    if (getUpdateInfo().status === 'moving') {
-      e.preventDefault()
-      setTimeout(() => {
-        app.quit()
-      }, 3000)
     }
   })
 
