@@ -1,60 +1,60 @@
-# 原神祈愿记录导出工具
+# 原神祈願記錄導出工具
 
 中文 | [English](https://github.com/howardt12345/genshin-wish-export/blob/main/README.md)
 
-一个使用 Electron 制作的小工具，需要在 Windows 64位操作系统上运行。
+一個使用 Electron 製作的小工具，需要在 Windows 64位操作系統上運行。
 
-通过读取游戏日志或者代理模式获取访问游戏祈愿记录 API 所需的 authKey，然后再使用获取到的 authKey 来读取游戏祈愿记录。
+通過讀取遊戲日誌或者代理模式獲取訪問遊戲祈願記錄 API 所需的 authKey，然後再使用獲取到的 authKey 來讀取遊戲祈願記錄。
 
-工具会在当前目录下的 `userData` 文件夹里保存数据，获取到新的祈愿记录时，会与本地数据合并后保存。
+工具會在當前目錄下的 `userData` 文件夾裡保存數據，獲取到新的祈願記錄時，會與本地數據合併後保存。
 
-需要更详细的数据分析，可以在导出 Excel 文件后使用这个项目的网页：[链接](https://github.com/voderl/genshin-gacha-analyzer)
+需要更詳細的數據分析，可以在導出 Excel 文件後使用這個項目的網頁：[鏈接](https://github.com/voderl/genshin-gacha-analyzer)
 
-## 从 Excel 恢复数据
+## 從 Excel 恢復數據
 https://genshin-gacha-export.danmu9.com
 
-可以通过这个网页从 Excel 文件导出 JSON 数据，也可以在网页上选择截止时间来去除重复数据。
+可以通過這個網頁從 Excel 文件導出 JSON 數據，也可以在網頁上選擇截止時間來去除重複數據。
 
-将下载的JSON文件复制到工具的 userData 文件夹即可恢复数据。
+將下載的JSON文件複製到工具的 userData 文件夾即可恢復數據。
 
-使用网页时一定要确保填写正确的 UID， 选择正确的 Excel 文件里使用的语言。
-## 其它语言
+使用網頁時一定要確保填寫正確的 UID， 選擇正確的 Excel 文件裡使用的語言。
+## 其它語言
 
-修改`src/i18n/`目录下的 json 文件就可以翻译到对应的语言。如果觉得已有的翻译有不准确或可以改进的地方，可以随时修改发 Pull Request。
+修改`src/i18n/`目錄下的 json 文件就可以翻譯到對應的語言。如果覺得已有的翻譯有不准確或可以改進的地方，可以隨時修改發 Pull Request。
 
-## 使用说明
+## 使用說明
 
-1. 下载工具后解压 - [下载地址](https://github.com/biuuu/genshin-wish-export/releases/latest/download/Genshin-Wish-Export.zip)
-2. 打开游戏的祈愿历史记录
+1. 下載工具後解壓 - [下載地址](https://github.com/biuuu/genshin-wish-export/releases/latest/download/Genshin-Wish-Export.zip)
+2. 打開遊戲的祈願歷史記錄
 
-   ![祈愿历史记录](/docs/wish-history.png)
-3. 点击工具的“加载数据”按钮
+   ![祈願歷史記錄](/docs/wish-history.png)
+3. 點擊工具的“加載數據”按鈕
 
-   ![加载数据](/docs/load-data.png)
+   ![加載數據](/docs/load-data.png)
 
-   如果没出什么问题的话，你会看到正在读取数据的提示，最终效果如下图所示
+   如果沒出什麼問題的話，你會看到正在讀取數據的提示，最終效果如下圖所示
 
    <details>
-    <summary>展开图片</summary>
+    <summary>展開圖片</summary>
 
-   ![预览](/docs/preview.png)
+   ![預覽](/docs/preview.png)
 
    </details>
 
-如果需要导出多个账号的数据，可以点击旁边的加号按钮。
+如果需要導出多個賬號的數據，可以點擊旁邊的加號按鈕。
 
-然后游戏切换的新账号，再打开祈愿历史记录，工具再点击“加载数据”按钮。
+然後遊戲切換的新賬號，再打開祈願歷史記錄，工具再點擊“加載數據”按鈕。
 
 ## Devlopment
 
 ```
-# 安装模块
+# 安裝模塊
 yarn install
 
-# 开发模式
+# 開發模式
 yarn dev
 
-# 构建一个可以运行的程序
+# 構建一個可以運行的程序
 yarn build
 ```
 
