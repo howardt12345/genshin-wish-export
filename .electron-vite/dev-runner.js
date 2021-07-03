@@ -60,7 +60,7 @@ function removeJunk(chunk) {
 
 function startRenderer() {
     return new Promise((resolve, reject) => {
-        Portfinder.basePort = 9080
+        Portfinder.basePort = 9081
         Portfinder.getPort(async (err, port) => {
             if (err) {
                 reject("PortError:" + err)
