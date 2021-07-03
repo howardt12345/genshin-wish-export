@@ -37,7 +37,7 @@
     </el-form>
     <h3 class="text-lg my-4">{{about.title}}</h3>
     <p class="text-gray-600 text-xs mt-1">{{about.license}}</p>
-    <p class="text-gray-600 text-xs mt-1">Github: <a @click="openGithub" class="cursor-pointer text-blue-400">https://github.com/biuuu/genshin-gacha-export</a></p>
+    <p class="text-gray-600 text-xs mt-1">Github: <a @click="openGithub" class="cursor-pointer text-blue-400">https://github.com/howardt12345/genshin-wish-export</a></p>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ const data = reactive({
 })
 
 const settingForm = reactive({
-  lang: 'zh-cn',
+  lang: 'en',
   logType: 1,
   proxyMode: true,
   autoUpdate: true
@@ -83,7 +83,7 @@ const disableProxy = async () => {
   await ipcRenderer.invoke('DISABLE_PROXY')
 }
 
-const openGithub = () => shell.openExternal('https://github.com/biuuu/genshin-gacha-export')
+const openGithub = () => shell.openExternal('https://github.com/howardt12345/genshin-wish-export')
 
 onMounted(async () => {
   data.langMap = await ipcRenderer.invoke('LANG_MAP')
