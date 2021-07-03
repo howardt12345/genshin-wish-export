@@ -5,7 +5,7 @@
   "ui.button.excel": "Export Excel",
   "ui.button.url": "Input URL",
   "ui.button.setting": "Settings",
-  "ui.button.option": "Option",
+  "ui.button.option": "Options",
   "ui.button.startProxy": "Proxy mode",
   "ui.select.newAccount": "New account",
   "ui.hint.newAccount": "Export data from other accounts",
