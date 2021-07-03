@@ -1,63 +1,65 @@
-# 原神祈愿记录导出工具
+# Genshin Impact Wish History Exporter
 
-中文 | [English](https://github.com/biuuu/genshin-wish-export/blob/main/docs/README_EN.md)
+[中文](https://github.com/biuuu/genshin-wish-export/blob/main/docs/README_ZH.md) | English
 
-一个使用 Electron 制作的小工具，需要在 Windows 64位操作系统上运行。
+A tool made from Electron that runs on the Windows 64 bit operating system.
 
-通过读取游戏日志或者代理模式获取访问游戏祈愿记录 API 所需的 authKey，然后再使用获取到的 authKey 来读取游戏祈愿记录。
+Read the game log or proxy to get the authKey needed to access the game wish history API, and then use the authKey to read the game wish history.
 
-工具会在当前目录下的 `userData` 文件夹里保存数据，获取到新的祈愿记录时，会与本地数据合并后保存。
+The tool will save the data in the `userData` folder in the current directory and will merge with the local data when a new wish history is obtained.
 
-需要更详细的数据分析，可以在导出 Excel 文件后使用这个项目的网页：[链接](https://github.com/voderl/genshin-gacha-analyzer)
+## Other languages
 
-## 从 Excel 恢复数据
+Modify the JSON file in the `src/i18n/` directory to translate into the appropriate language.
+
+If you feel that the existing translation is inappropriate, you can send a pull request to modify it at any time.
+
+## Recover data from Excel
 https://genshin-gacha-export.danmu9.com
 
-可以通过这个网页从 Excel 文件导出 JSON 数据，也可以在网页上选择截止时间来去除重复数据。
+You can export JSON data from an Excel file through this web page, or you can select a End Date on the web page to remove duplicate data.
 
-将下载的JSON文件复制到工具的 userData 文件夹即可恢复数据。
+Copy the downloaded JSON file to the userData folder of the tool to recover the data.
 
-使用网页时一定要确保填写正确的 UID， 选择正确的 Excel 文件里使用的语言。
-## 其它语言
+When using web pages, be sure to fill in the correct UID and select the correct language used in the Excel file.
 
-修改`src/i18n/`目录下的 json 文件就可以翻译到对应的语言。如果觉得已有的翻译有不准确或可以改进的地方，可以随时修改发 Pull Request。
+## Usage
 
-## 使用说明
+1. Unzip after downloading the tool - [Download](https://github.com/biuuu/genshin-wish-export/releases/latest/download/Genshin-Wish-Export.zip)
+2. Open the wish history of the game
 
-1. 下载工具后解压 - [下载地址](https://github.com/biuuu/genshin-wish-export/releases/latest/download/Genshin-Wish-Export.zip)
-2. 打开游戏的祈愿历史记录
+    ![wish history](/docs/wish-history-en.png)
 
-   ![祈愿历史记录](/docs/wish-history.png)
-3. 点击工具的“加载数据”按钮
+3. Click the tool's "Load data" button
 
-   ![加载数据](/docs/load-data.png)
+    ![load data](/docs/load-data-en.png)
 
-   如果没出什么问题的话，你会看到正在读取数据的提示，最终效果如下图所示
+    If nothing goes wrong, you'll be prompted to read the data, and the final result will look like this
 
-   <details>
-    <summary>展开图片</summary>
+    <details>
+    <summary>Expand the picture</summary>
 
-   ![预览](/docs/preview.png)
+    ![preview](/docs/preview-en.png)
+    </details>
 
-   </details>
+If you need to export the data of multiple accounts, you can click the plus button next to it.
 
-如果需要导出多个账号的数据，可以点击旁边的加号按钮。
-
-然后游戏切换的新账号，再打开祈愿历史记录，工具再点击“加载数据”按钮。
+Then switch to the new account of the game, open the wish history, and click the "load data" button in the tool.
 
 ## Devlopment
 
 ```
-# 安装模块
+# install node modules
 yarn install
 
-# 开发模式
+# develop
 yarn dev
 
-# 构建一个可以运行的程序
+# Build a program that can run
 yarn build
 ```
 
 ## License
 
 [MIT](https://github.com/biuuu/genshin-wish-export/blob/main/LICENSE)
+
