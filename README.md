@@ -1,6 +1,6 @@
 # Genshin Impact Wish History Exporter
 
-[中文](https://github.com/biuuu/genshin-wish-export/blob/main/docs/README_ZH.md) | English
+[中文](https://github.com/howardt12345/genshin-wish-export/blob/main/docs/README_ZH.md) | English
 
 A tool made from Electron that runs on the Windows 64 bit operating system.
 

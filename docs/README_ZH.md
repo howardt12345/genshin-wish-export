@@ -1,6 +1,6 @@
 # 原神祈愿记录导出工具
 
-中文 | [English](https://github.com/biuuu/genshin-wish-export/blob/main/README.md)
+中文 | [English](https://github.com/howardt12345/genshin-wish-export/blob/main/README.md)
 
 一个使用 Electron 制作的小工具，需要在 Windows 64位操作系统上运行。
 
