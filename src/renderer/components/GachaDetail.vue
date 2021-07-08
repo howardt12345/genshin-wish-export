@@ -8,7 +8,8 @@
     <span class="mr-1">{{text.total}}
       <span class="text-blue-600">{{detail.total}}</span> {{text.times}}
     </span>
-    <span v-if="type !== '100'">{{text.sum}}<span class="mx-1 text-green-600">{{detail.countMio}}</span>{{text.no5star}}</span>
+    <br><span v-if="type !== '100'">{{text.sum}}<span class="mx-1 text-green-600">{{detail.countl4s}}</span>{{text.no4star}}</span>
+    <br><span v-if="type !== '100'">{{text.sum}}<span class="mx-1 text-green-600">{{detail.countl5s}}</span>{{text.no5star}}</span>
   </p>
   <p class="text-gray-600 text-xs mb-1">
     <span :title="`${text.character}${colon}${detail.count5c}\n${text.weapon}${colon}${detail.count5w}`" class="mr-3 whitespace-pre cursor-help text-yellow-500">

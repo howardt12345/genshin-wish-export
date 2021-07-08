@@ -17,7 +17,7 @@ const gachaDetail = (data) => {
       weapon3: new Map(), weapon4: new Map(), weapon5: new Map(),
       char4: new Map(), char5: new Map(),
       date: [],
-      ssrPos: [], countMio: 0, total: value.length
+      ssrPos: [], countl4s: 0, countl5s: 0, total: value.length
     }
     let lastSSR = 0
     let dateMin = 0
@@ -31,14 +31,16 @@ const gachaDetail = (data) => {
       if (dateMax < timestamp) dateMax = timestamp
       if (rank === 3) {
         detail.count3++
-        detail.countMio++
+        detail.countl4s++
+        detail.countl5s++
         if (isWeapon(type)) {
           detail.count3w++
           itemCount(detail.weapon3, name)
         }
       } else if (rank === 4) {
         detail.count4++
-        detail.countMio++
+        detail.countl4s = 0
+        detail.countl5s++
         if (isWeapon(type)) {
           detail.count4w++
           itemCount(detail.weapon4, name)
@@ -50,7 +52,7 @@ const gachaDetail = (data) => {
         detail.ssrPos.push([name, index + 1 - lastSSR, time])
         lastSSR = index + 1
         detail.count5++
-        detail.countMio = 0
+        detail.countl5s = 0
         if (isWeapon(type)) {
           detail.count5w++
           itemCount(detail.weapon5, name)
