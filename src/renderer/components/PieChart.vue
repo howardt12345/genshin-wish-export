@@ -93,7 +93,7 @@ const updateChart = throttle(() => {
       {
         name: props.typeMap.get(props.data[0]),
         type: 'pie',
-        top: 50,
+        top: 75,
         startAngle: 70,
         radius: ['0%', '90%'],
         // avoidLabelOverlap: false,
